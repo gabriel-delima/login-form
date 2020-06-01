@@ -1,0 +1,193 @@
+/* ==================================== BASIC CONFIGS ==================================== */ 
+#main-header{
+    display: none;
+}
+.main-area{  
+    background: none ;
+    width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+    position:relative;
+}
+.login-area{
+    background-color: none;
+    max-width:525px;
+	min-height:670px;
+}
+/* ==================================== LOGO ==================================== */                     
+.header{
+    padding: 5% 3%;
+    text-align: center;
+    align-items: center;
+}
+.header h1{
+    font-family: 'Modern Antiqua', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+}
+#logo-icon{
+    width: 40%;
+}                  
+.hr{
+	height:2px;
+	margin: 20px 20px 20px 20px;
+    background:rgba(255,255,255,.2);
+}
+/* ==================================== SELECTION AREA==================================== */   
+.tab{
+    display: none;
+}   
+.tab-name{
+    font:600 16px/18px 'Quicksand', sans-serif;;
+    font-size: 1.3em;
+    color: gray;
+    padding: 3% 0 3% 0;
+    margin: 0 3% 0 3%;
+    transition: 0.6s;
+    border-bottom: 2px solid rgba(255, 255, 255, 0); ;
+}    
+.tab:checked + .tab-name{
+    padding: 3% 0 0 0;
+    margin: 0 3% 3% 3%;
+    transition: 0.4s;
+	color:#fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); ;
+    font-size: 1.6em;
+}
+/* ==================================== LOGIN FORM ==================================== */           
+/*------- LAYOUT AND SHOWING THE SELECTED OPTION */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+} 
+.form-input{
+    width: 90%;
+    position: absolute;
+    padding: 5% 4%;
+    font-family: 'Quicksand', sans-serif;
+    transform: rotateY(180deg);     /* Both input pages are rotated by default, so they start hidden.       */
+    backface-visibility: hidden;    /* When the user selects one option (sign-in or sign-up), the selected  */
+    transition: all .6s linear;     /* one back to the normal and appear. Sign-in is choosen by default     */
+}
+#sign-in:checked + .tab-name + .tab + .tab-name + .hr + .container #form-input-sign-in{
+    transform: rotate(0);
+}
+#sign-up:checked + .tab-name + .hr + .container #form-input-sign-up{
+    transform: rotate(0);
+}
+
+/*------- FORM INPUTS */
+.icon-modify {
+    color: rgba(138, 138, 138, 0.815);
+    padding: 18px 15px 15px;
+}
+.label-input{
+    display: flex;
+    height: 50px;
+    margin-bottom: 10px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.651);
+    border:none;
+	border-radius:25px;
+	background:rgba(255, 255, 255, 0.158);
+}
+.form-input label input{
+    font:600 16px/18px 'Quicksand', sans-serif;;
+    font-size: 1em;
+    color: rgb(201, 201, 201);
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+}
+.form-input label input:invalid{
+    border: 0px solid blue;
+}
+
+/*------- CHECKBOX*/
+
+/*------- SUBMIT BUTTON*/
+.submit-btn{
+    cursor: pointer;
+    width:100%;
+    display:block;
+    border: 1px solid rgba(255,255,255,0.3);
+	padding:15px 20px;
+	border-radius:25px;
+    background: none;
+    transition: 0.3s;
+}
+.submit-btn:hover{
+    background-color:rgba(104, 104, 104, 0.158);
+}
+.submit-btn:active {
+    transform: scale(0.95);
+}
+.submit-btn h1{
+      font-size: 1.5em;
+      color:rgba(255, 255, 255, 0.473);
+}            
+/*------- PASSWORD RECOVERY*/    
+#password-recovery{
+    text-align: center;
+    padding: 15px 15px 0 15px;
+}
+#password-recovery a{
+    font:600 16px/18px 'Quicksand', sans-serif;;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+    position: static;  
+    text-decoration: none;
+    transition: 0.3s;
+}
+#password-recovery a:hover{
+    color: rgb(255, 255, 255);
+}
+  /* ==================================== FOOTER ==================================== */
+#login-page-social-icons{
+    padding: 0;
+}
+#login-page-social-icons a{
+    font-size: 1.3em;
+}
+#login-page-copyright-text{
+    font-size: 0.8em;
+    margin-top: 2%;
+}
+
+/* ==================================== LAYOUT CHANGES ==================================== */ 
+/* ===== MOBILE FIRST ===== */
+/* DEFAULT - up to 480px*/
+
+/* ===== MOBILE - SMALL DEVICES ===== */
+@media screen and (min-width:480px){
+    
+}
+/* ===== TABLETS - SMALL DEVICES ===== */
+@media screen and (min-width:696px){
+    .tab-name{
+        font-size: 1.5em;
+    }
+    .tab:checked + .tab-name{
+       
+        font-size: 1.8em;
+    }
+    #login-page-social-icons a{
+        font-size: 1.5em;
+    }
+    #login-page-copyright-text{
+        font-size: 1em;
+    }
+}
+/* ===== TABLETS/DESKTOP - MEDIUM DEVICES ===== */
+@media screen and (min-width:960px){
+    
+}
+/* ===== DESKTOP - LARGE DEVICES ===== */
+@media screen and (min-width:1240px){
+   
+}

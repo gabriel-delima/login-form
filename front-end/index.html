@@ -1,0 +1,132 @@
+<!--- FIRST PAGE THAT THE USER SEES IF HE'S NOT ALREADY CONNECTED -->
+<!--- STYLE : LOGIN.CSS -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Radio Vacation</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="Music, Música, Radio, Rádio">
+        <link rel="icon" href="icons/nature.svg">
+        <link rel="stylesheet" href="general.css">
+        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="styles/reset.css">
+
+        <!--- free icons taken from www.fontawesome.com/icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+        <!--- free fonts taken from www.fonts.google.com -->
+        <link href="https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet"> 
+        
+    </head>
+    <body>
+        <!-------------------------------------- NOT USED ON THIS PAGE-->
+        <header id="main-header">
+            <a href="gg.html" id="header-link-logo"></a>
+            <a href="gg.html" id="header-link-name"><h1>Moon Radio</h1></a>
+            <button class="header-btn" id="header-btn-menu"><i class="fas fa-bars"></i></button>
+            <a href="#" id="header-user-page-link"><i class="fas fa-user-circle"></i></a>  
+            <nav id="header-menu">
+                <button class="header-btn" id="header-menu-btn-close"><i class="fa fa-times"></i></button>
+                <ul>
+                    <li><a href="#">PLAYLIST 1</a></li>
+                    <li><a href="#">PLAYLIST 2</a></li>
+                    <li><a href="#">PLAYLIST 3</a></li>
+                    <li><a href="#">PLAYLIST 4</a></li>
+                    <li><a href="#">SING OUT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script>
+            $("#header-btn-menu").click(function(){
+                $("#header-menu").fadeIn();
+            });
+            $("#header-menu-btn-close").click(function(){
+                $("#header-menu").fadeOut();
+            });
+        </script>
+        <!---------------------------------------->
+
+        <div id="main">
+            <main class="main-area">
+                <div class="login-area">
+                    <!------------------- LOGO AREA ------------------->
+                    <div class="header">
+                        <h1>Moon Radio</h1>
+                        <div class="icon-container">
+                            <img src="./icons/nature.svg" alt="Moon icon" id="logo-icon">
+                        </div>
+                    </div>
+                    <!------------------- LOGIN/REGISTER SELECTION ------------------->
+                    <input id="sign-in" type="radio" name="tab" checked class="tab"><label for="sign-in" class="tab-name">Sign In</label>
+                    <input id="sign-up" type="radio" name="tab" class="tab"><label for="sign-up" class="tab-name">Sign Up</label>
+                    <div class="hr"></div>
+            
+                    <!-------------------LOGIN/REGISTER AREA------------------->
+                    <div class="container">
+                        <!-- SIGN IN -->
+                        <div class="form-input" id="form-input-sign-in">   
+                            
+                            <label class="label-input">
+                                <i class="far fa-user icon-modify"></i>
+                                <input type="text" name="login" placeholder="login" class="input" id="login">
+                            </label>
+
+                            <label class="label-input">
+                                <i class="fas fa-lock icon-modify"></i>
+                                <input type="password" name="password" placeholder="password" class="input" id="password">
+                            </label>
+
+                            <button class="submit-btn" id="submit-btn-sign-in"><h1>SIGN IN</h1></button>
+                    
+                            <div id="password-recovery">
+                                <a href="#forgot">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <!-- SIGN UP -->
+                        <div class="form-input" id="form-input-sign-up">
+                            <label class="label-input">
+                                <i class="far fa-envelope icon-modify"></i>
+                                <input type="email" name="email" placeholder="email" class="input" id="email">
+                            </label>
+
+                            <label class="label-input">
+                                <i class="fas fa-user-plus icon-modify"></i>
+                                <input type="text" name="login" placeholder="login" class="input" id="login">
+                            </label>
+
+                            <label class="label-input">
+                                <i class="fas fa-lock icon-modify"></i>
+                                <input type="password" name="password" placeholder="password" class="input" id="password">
+                            </label>
+
+                            <label class="label-input">
+                                <i class="fas fa-lock icon-modify"></i>
+                                <input type="password" name="confirm-password" placeholder="confirm password" class="input" id="confirm-password">
+                            </label>
+                            
+                            <button class="submit-btn" id="submit-btn-sign-up"><h1>SIGN UP</h1></button>
+                        </div>
+                    </div>
+                    <div class="hr" id="hr2"></div>
+
+                    <!------------------- FOOTER ------------------->
+                    <div class="social-icons" id="login-page-social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                    <div class="copyright-area" id="login-page-copyright-area">         
+                        <p class="copyright-text" id="login-page-copyright-text"> Copyright © Moon Radio 2020. Todos os direitos reservados.</p> 
+                    </div>     
+                    
+                </div>
+            </main>
+        </div>
+
+    </body>
+</html>

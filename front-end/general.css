@@ -1,0 +1,262 @@
+/* THIS CODE INCLUDES THE CONFIGS FOR BACKGROUND AND THE HEADER WICH ARE THE SAME FOR ALL PAGES*/ 
+
+/* ==================================== BACKGROUND ==================================== */ 
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../front-end/imgs/estrelas.png) scroll 0% 0%, rgb(22, 20, 27) none repeat scroll 0% 0%;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+#main{
+    flex-direction: column;
+    -moz-box-align: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background:  url(../front-end/imgs/montanha.png) repeat-x scroll center bottom;
+    background-size: 150%;
+    background-position: 0 100%; 
+    background-attachment: fixed;
+}
+/* ==================================== HEADER ==================================== */  
+/*------- LAYOUT */   
+#main-header{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom,rgb(28, 27, 31),rgb(26, 24, 32) ) ;
+}
+/*------- HOME LINK ON THE LEFT */   
+#header-link-logo{
+    margin: 10px 0 0 10px;
+    position: relative;
+    background: url(./icons/nature.svg) no-repeat;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    float: left;
+}
+#header-link-name{
+    margin: 7px 0 0 0;
+    padding: 0 0 0 10px;
+    float: left;
+    text-decoration: none;
+    height: 30px;
+    width: 11px;
+}
+#header-link-name h1{
+    margin: 0;
+    font-family: 'Modern Antiqua', cursive;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+/*------- LINKS ON THE RIGTH (MENU AND USER PAGE)*/  
+.header-btn{
+    padding: 0%;
+    margin: 20px 10px 0 0;
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.header-btn i{
+    padding: 0 0 0 0;
+    margin: 0;
+    color: #dde2f2;
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+#header-user-page-link{
+    margin: 15px 15px 0 0;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+#header-user-page-link i{
+    padding: 0;
+    margin: 0;
+    color: #dde2f2;
+    font-size: 30px;
+}
+/*------- MENU */  
+#header-menu{
+    display: none;/* Não é exibido por padrão*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0 , 0.9);
+    top:0;
+    left: 0;
+}
+#header-menu ul{
+    width: 100%;
+    float: left;
+    text-align: center;
+    list-style: none;
+}
+#header-menu li{
+    padding: 1.5%;
+}
+#header-menu li a{
+    text-decoration: none;
+    font-size: 2em;
+    color: #fff;
+    padding: 1.5%;
+}
+#header-menu li a:hover{
+    border: 1px solid rgb(26, 24, 32);
+}
+
+/* ==================================== FOOTER ==================================== */  
+#main-footer{
+    background: linear-gradient(to top,rgb(28, 27, 31),rgb(26, 24, 32));
+}
+.social-icons {
+    padding: 2% 0 2% 0;
+    text-align: center;
+    width: 100%;
+}
+.social-icons a{
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 5%;
+    transition: 0.3s;
+}
+.social-icons a:last-child{
+    margin-right: 0;
+}
+.social-icons a:hover{
+    color: rgb(255, 255, 255);
+}
+.copyright-text{
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    margin: 0;
+}
+.copyright-area{
+    text-align: center;
+    padding: 5px 0 20px 0;
+}
+/* ==================================== LAYOUT CHANGES ==================================== */ 
+/* ===== MOBILE FIRST ===== */
+/* DEFAULT - up to 480px*/
+
+/* ===== MOBILE - SMALL DEVICES ===== */
+@media screen and (min-width:480px){
+    body{
+        background-size: 90%;
+        background-position: 0 0;
+        background-attachment: fixed;
+    }
+    #main{
+        background-size: 100%;
+        background-position: 0px 100%; 
+        background-attachment: fixed;
+    }
+    .social-icons a{
+        font-size: 1.5em;
+    }
+    .copyright-text{
+        font-size: 1em;
+    }
+}
+/* ===== TABLETS - SMALL DEVICES ===== */
+@media screen and (min-width:696px){
+    body{
+        background-size: 60%;
+        background-position: 0px 0px;
+        background-attachment: fixed;
+    }
+    #main{
+        background-size: 100%;
+        background-position: 0px 100%; 
+        background-attachment: fixed;
+    }
+    #header-link-name{
+        margin: 17.5px 0 0 0;
+        height: 25px;
+        width: 150px;
+    }
+    #header-link-name h1{
+        font-size: 25px;
+    }
+}
+/* ===== TABLETS/DESKTOP - MEDIUM DEVICES ===== */
+@media screen and (min-width:960px){
+    body{
+        background-size: 50%;
+        background-position: 0px 0px;
+        background-attachment: fixed;
+    }
+    #main{
+        background-size: 100%;
+        background-position: 0px 120%; 
+        background-attachment: fixed;
+    }
+    #header-link-name{
+        margin: 15px 0 0 0;
+        height: 30px;
+        width: 180px;
+    }
+    #header-link-name h1{
+        font-size: 30px;
+    }
+}
+/* ===== DESKTOP - LARGE DEVICES ===== */
+@media screen and (min-width:1240px){
+    body{
+        background-size: 40%;
+        background-position: 0px 0px;
+        background-attachment: fixed;
+    }
+    #main{
+        background-size: 100%;
+        background-position: 0 150%; 
+        background-attachment: fixed;
+    }
+    #header-link-name{
+        margin: 15px 0 0 0;
+        height: 30px;
+        width: 180px;
+    }
+    #header-link-name h1{
+        font-size: 30px;
+    }
+    .copyright-area{
+        text-align: center;
+        padding: 0 0 15px 0;
+    }
+    .social-icons {
+        padding: 1% 0 1% 0;
+    }
+    .social-icons a{
+        font-size: 1.6em;
+    }
+    /*
+    #header-menu{
+        margin-left: 85%;
+        width: 15%;
+        height: 50%;
+        
+    }
+    #header-menu li a{
+        position: relative;
+        text-align: left;
+        margin: 0;
+        font-size: 2em;
+        color: #fff;
+        padding: 0 25px 0 0;*/
+}
